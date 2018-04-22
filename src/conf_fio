@@ -1,0 +1,15 @@
+[default]
+rw=randrw randwrite randread write read
+bs=1024 64 32 4
+ioengine=libaio
+numjobs=1
+size=100G
+runtime=1000
+filename=/mnt/test-100G
+rwmixread=50
+vm_ip=192.168.32.11 192.168.32.6 192.168.32.13 192.168.32.10 192.168.32.17 192.168.32.4 
+sum_ip=192.168.32.9
+sleep_second=100
+pre_exec_time=300
+[host]
+host_ip=10.254.1.201 10.254.1.202 10.254.1.203
