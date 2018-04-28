@@ -1,15 +1,18 @@
 [default]
-rw=randrw randwrite randread write read
-bs=1024 64 32 4
-ioengine=libaio
-numjobs=1
-size=100G
-runtime=1000
-filename=/mnt/test-100G
-rwmixread=50
-vm_ip=192.168.32.11 192.168.32.6 192.168.32.13 192.168.32.10 192.168.32.17 192.168.32.4 
-sum_ip=192.168.32.9
+fio_rw=randrw randwrite randread write read
+fio_bs=4 32 64 1024
+fio_ioengine=libaio
+fio_numjobs=1
+fio_size=100G
+fio_runtime=1000
+fio_filename=/mnt/testfile-1
+fio_rwmixread=50
+fio_vm_ip=192.168.32.13 192.168.32.15 192.168.32.7 192.168.32.12 192.168.32.8 192.168.32.4 192.168.32.6 192.168.32.9 192.168.32.11
+summary_ip=192.168.32.19
 sleep_second=100
-pre_exec_time=300
+pre_runtime=300
+pre_mode=randrw
+name=9vm-100G
 [host]
-host_ip=10.254.1.201 10.254.1.202 10.254.1.203
+host_ip=10.3.12.66 10.3.12.67 10.3.12.68
+
